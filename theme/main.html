@@ -1,0 +1,161 @@
+{% extends "base.html" %}
+
+{% block styles %}
+    {{ super() }}
+
+    <!-- Overriding original styles -->
+    <link rel="stylesheet" href="{{ 'css/override.css' | url }}" />
+
+    <!-- Content -->
+    <link rel="stylesheet" href="{{ 'css/content.css' | url }}" />
+
+    <!-- References -->
+    <link rel="stylesheet" href="{{ 'css/refs.css' | url }}" />
+
+    <!-- Donate button -->
+    <link rel="stylesheet" href="{{ 'css/donate.css' | url }}" />
+
+    <!-- Navigation -->
+    <link rel="stylesheet" href="{{ 'css/nav.css' | url }}" />
+
+    <!-- Contributors -->
+    <link rel="stylesheet" href="{{ 'css/contributors.css' | url }}" />
+
+    <!-- Footer -->
+    <link rel="stylesheet" href="{{ 'css/footer.css' | url }}" />
+
+    <!-- LIBS BEGIN -->
+
+    <!-- Font Awesome 5 -->
+    <link rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+          crossorigin="anonymous">
+
+    <!-- MathJax style -->
+    <link rel="stylesheet" href="{{ 'css/mathjax.css' | url }}" />
+
+{% endblock %}
+
+{% block libs %}
+    {{ super() }}
+
+    <!-- Google Auto Ads -->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-8094912170389944",
+            enable_page_level_ads: true
+        });
+    </script>
+
+    <!-- MathJax config -->
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            messageStyle: "none",
+            TeX: { equationNumbers: { autoNumber: "AMS" } }
+        });
+    </script>
+
+    <!-- MathJax -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_CHTML&locale=ru' async></script>
+
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="{{ 'libs/magnific-popup/magnific-popup.css' | url }}" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="{{ 'libs/magnific-popup/jquery.magnific-popup.min.js' | url }}"></script>
+
+    <script>
+        $(function ()
+        {
+            $('.md-content a > img').each(function (i, elem)
+            {
+                $(this).parent().addClass('img-link');
+            });
+
+            $('.img-link').magnificPopup({type: 'image'});
+        });
+    </script>
+
+    <!-- DefTheoRef [В будущем сделать pymarkdown аддон!] -->
+    <!-- Добавление возможности ссылаться на определения и теоремы -->
+
+    <script>
+        $(function ()
+        {
+            $('[id^="def-"]').each(function (i, elem)
+            {
+                var id = $(this).attr('id');
+                var $next = $(this).parent().next();
+
+                if ($next.hasClass('определение'))
+                {
+                    $next.find('.admonition-title').append('<a class="def-ref" title="Ссылка на это определение" href="#' + id + '">#</a>');
+                }
+            });
+
+            $('[id^="theorem-"]').each(function (i, elem)
+            {
+                var id = $(this).attr('id');
+                var $next = $(this).parent().next();
+
+                if ($next.hasClass('теорема'))
+                {
+                    $next.find('.admonition-title').append('<a class="theorem-ref" title="Ссылка на эту теорему" href="#' + id + '">#</a>');
+                }
+            });
+        });
+    </script>
+
+{% endblock %}
+
+{% block content %}
+    {{ super() }}
+
+    <div class="contributors" style="display: none">
+        <h2 id="contributors">Вклад внесли <span class="count">36</span></h2>
+        <ul class="contributors-list"></ul>
+    </div>
+    <script>
+        $(function ()
+        {
+            var editUrl = '{{ page.edit_url }}';
+            var fpath = editUrl.split('{{ config.repo_url }}edit/master/').pop();
+
+            var already = [];
+
+            fetch('https://api.github.com/repos/{{ config.repo_name }}/commits?path=' + fpath).then(function (response)
+            {
+                return response.json();
+            }).then(function (commits)
+            {
+                for (var i = 0; i < commits.length; i++)
+                {
+                    var author = commits[i].author;
+
+                    if (already.includes(author.login))
+                    {
+                        continue
+                    }
+                    else
+                    {
+                        already.push(author.login);
+                    }
+
+                    var url = '{{ config.repo_url }}commits/master/' + fpath + '?author=' + author.login;
+
+                    $('.contributors-list').append('<li><a title="' + author.login + '" href="' + url + '" target="_blank"><img src="' + author.avatar_url + '&s=40" /></a></li>');
+                }
+
+                $('.contributors .count').html(already.length);
+
+                if (already.length > 0)
+                {
+                    $('.contributors').show();
+                }
+            });
+        });
+    </script>
+
+
+{% endblock %}

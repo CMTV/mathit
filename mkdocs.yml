@@ -1,0 +1,64 @@
+site_name: Математика
+site_url: 'https://book.mathit.ru'
+
+repo_name: math-it/book
+repo_url: 'https://github.com/math-it/book'
+
+nav:
+    - Об учебнике: index.md
+
+theme:
+    name: material
+    custom_dir: theme
+
+    language: 'ru'
+
+    palette:
+        primary: white
+        accent: blue
+
+    logo: 'logo.svg'
+    favicon: 'favicon.png'
+
+markdown_extensions:
+    - admonition
+    - codehilite
+    - footnotes
+    - meta
+    - attr_list
+    - toc:
+          permalink: '#'
+          slugify: !!python/name:pymdownx.slugs.uslugify
+    - pymdownx.superfences
+    - pymdownx.details
+    - pymdownx.tilde
+
+google_analytics:
+    - 'UA-133312573-1'
+    - 'auto'
+
+extra:
+    search:
+        language: 'ru, en'
+
+    nav_links:
+        - title: 'Задать вопрос'
+          icon: 'far fa-question-circle'
+          url: 'https://mathit.ru/'
+
+        - title: 'Форум'
+          icon: 'far fa-comments'
+          url: 'https://mathit.ru/'
+
+        - title: 'GitHub'
+          icon: 'fab fa-github'
+          url: 'https://github.com/math-it/book'
+
+    quotations:
+        - '«Очевидный» — самое опасное слово в математике'
+        - 'Нельзя быть настоящим математиком, не будучи немного поэтом'
+        - 'Математика — это наука о бесконечном'
+        - 'Математика — царица наук, арифметика — царица математики'
+        - 'Математика — это язык, на котором написана книга природы'
+        - 'Математика — это язык!'
+        - 'Математика — самая надежная форма пророчества'

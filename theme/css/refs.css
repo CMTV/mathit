@@ -1,0 +1,13 @@
+a[id^=def-],
+a[id^=theorem-] {
+  position: relative;
+  top: -70px;
+  display: block;
+}
+
+.def-ref,
+.theorem-ref {
+  padding-left: 6px;
+}
+
+/*# sourceMappingURL=refs.css.map */

@@ -1,0 +1,21 @@
+.md-content
+{
+    h1, h2, h3, h4, h5, h6
+    {
+        font-weight: normal;
+    }
+
+    text-align: justify;
+
+    img
+    {
+        display: block;
+        margin: 0 auto;
+
+        &.img-border
+        {
+            border: 2px solid #ececec;
+            border-radius: 3px;
+        }
+    }
+}
