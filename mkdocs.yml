@@ -6,6 +6,8 @@ repo_url: 'https://github.com/math-it/book'
 
 nav:
     - Об учебнике: index.md
+    - Язык математики:
+        - О языках: math-lang/about-langs.md
 
 theme:
     name: material

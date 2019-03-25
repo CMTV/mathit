@@ -4,6 +4,10 @@ a[id^="theorem-"]
     position: relative;
     top: -70px;
     display: block;
+
+    @media print {
+        display: none;
+    }
 }
 
 .def-ref,
