@@ -10,6 +10,7 @@ nav:
         - О языках: math-lang/about-langs.md
         - Математический язык: math-lang/math-lang.md
         - Алфавит языка математики: math-lang/alphabet.md
+        - Выражения: math-lang/expressions/index.md
 
 theme:
     name: material

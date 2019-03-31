@@ -52,8 +52,14 @@
     <!-- MathJax config -->
     <script type="text/x-mathjax-config">
         MathJax.Hub.Config({
-            messageStyle: "none",
-            TeX: { equationNumbers: { autoNumber: "AMS" } }
+            TeX: { equationNumbers: { autoNumber: "AMS" } },
+            jax: ["input/TeX", "output/HTML-CSS"],
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+                processEscapes: true
+            },
+            messageStyle: "none"
         });
     </script>
 
@@ -156,6 +162,5 @@
             });
         });
     </script>
-
 
 {% endblock %}
