@@ -11,6 +11,13 @@ nav:
         - Математический язык: math-lang/math-lang.md
         - Алфавит языка математики: math-lang/alphabet.md
         - Выражения: math-lang/expressions/index.md
+        - Операции и отношения: math-lang/operations-relations.md
+    - Основы логики:
+        - О математической логике: base-math-logic/about-math-logic/index.md
+        - Логические операции: base-math-logic/logic-operations/index.md
+        - Импликация: base-math-logic/implication/index.md
+        - Эквивалентность: base-math-logic/equivalence/index.md
+        - Общезначимые формулы: base-math-logic/true-formulas/index.md
 
 theme:
     name: material

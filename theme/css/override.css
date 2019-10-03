@@ -1,8 +1,8 @@
 @charset "UTF-8";
 /* ====================== SCROLLBARS ====================== */
 .md-typeset pre > code::-webkit-scrollbar {
-  width: 0.4rem;
-  height: 0.4rem;
+  width: .4rem;
+  height: .4rem;
 }
 
 /* ====================== Admonition ====================== */
@@ -13,146 +13,186 @@
 .md-typeset .admonition.упражнение, .md-typeset details.упражнение {
   border-left-color: #5FDF1F;
 }
-[dir=rtl] .md-typeset .admonition.упражнение, [dir=rtl] .md-typeset details.упражнение {
+
+[dir="rtl"] .md-typeset .admonition.упражнение, [dir="rtl"] .md-typeset details.упражнение {
   border-right-color: #5FDF1F;
 }
+
 .md-typeset .admonition.упражнение > .admonition-title, .md-typeset .admonition.упражнение > summary, .md-typeset details.упражнение > .admonition-title, .md-typeset details.упражнение > summary {
   color: #307010;
   border-top: 1px solid rgba(95, 223, 31, 0.1);
   border-bottom-color: px2rem(1px) solid rgba(95, 223, 31, 0.1);
   background-color: rgba(95, 223, 31, 0.1);
 }
+
 .md-typeset .admonition.упражнение > .admonition-title a, .md-typeset .admonition.упражнение > summary a, .md-typeset details.упражнение > .admonition-title a, .md-typeset details.упражнение > summary a {
   opacity: 0;
   color: #307010;
-  transition: opacity 0.2s;
+  -webkit-transition: opacity .2s;
+  transition: opacity .2s;
 }
+
 .md-typeset .admonition.упражнение > .admonition-title:hover a, .md-typeset .admonition.упражнение > summary:hover a, .md-typeset details.упражнение > .admonition-title:hover a, .md-typeset details.упражнение > summary:hover a {
   opacity: 1;
 }
+
 .md-typeset .admonition.упражнение > .admonition-title::before, .md-typeset .admonition.упражнение > summary::before, .md-typeset details.упражнение > .admonition-title::before, .md-typeset details.упражнение > summary::before {
   color: #5FDF1F;
   content: "";
 }
+
 .md-typeset .admonition.указание, .md-typeset details.указание {
   border-left-color: #B8C82A;
 }
-[dir=rtl] .md-typeset .admonition.указание, [dir=rtl] .md-typeset details.указание {
+
+[dir="rtl"] .md-typeset .admonition.указание, [dir="rtl"] .md-typeset details.указание {
   border-right-color: #B8C82A;
 }
+
 .md-typeset .admonition.указание > .admonition-title, .md-typeset .admonition.указание > summary, .md-typeset details.указание > .admonition-title, .md-typeset details.указание > summary {
   color: #5c6415;
   border-top: 1px solid rgba(184, 200, 42, 0.1);
   border-bottom-color: px2rem(1px) solid rgba(184, 200, 42, 0.1);
   background-color: rgba(184, 200, 42, 0.1);
 }
+
 .md-typeset .admonition.указание > .admonition-title a, .md-typeset .admonition.указание > summary a, .md-typeset details.указание > .admonition-title a, .md-typeset details.указание > summary a {
   opacity: 0;
   color: #5c6415;
-  transition: opacity 0.2s;
+  -webkit-transition: opacity .2s;
+  transition: opacity .2s;
 }
+
 .md-typeset .admonition.указание > .admonition-title:hover a, .md-typeset .admonition.указание > summary:hover a, .md-typeset details.указание > .admonition-title:hover a, .md-typeset details.указание > summary:hover a {
   opacity: 1;
 }
+
 .md-typeset .admonition.указание > .admonition-title::before, .md-typeset .admonition.указание > summary::before, .md-typeset details.указание > .admonition-title::before, .md-typeset details.указание > summary::before {
   color: #B8C82A;
   content: "";
 }
+
 .md-typeset .admonition.ответ, .md-typeset details.ответ {
   border-left-color: #00C858;
 }
-[dir=rtl] .md-typeset .admonition.ответ, [dir=rtl] .md-typeset details.ответ {
+
+[dir="rtl"] .md-typeset .admonition.ответ, [dir="rtl"] .md-typeset details.ответ {
   border-right-color: #00C858;
 }
+
 .md-typeset .admonition.ответ > .admonition-title, .md-typeset .admonition.ответ > summary, .md-typeset details.ответ > .admonition-title, .md-typeset details.ответ > summary {
   color: #00642c;
   border-top: 1px solid rgba(0, 200, 88, 0.1);
   border-bottom-color: px2rem(1px) solid rgba(0, 200, 88, 0.1);
   background-color: rgba(0, 200, 88, 0.1);
 }
+
 .md-typeset .admonition.ответ > .admonition-title a, .md-typeset .admonition.ответ > summary a, .md-typeset details.ответ > .admonition-title a, .md-typeset details.ответ > summary a {
   opacity: 0;
   color: #00642c;
-  transition: opacity 0.2s;
+  -webkit-transition: opacity .2s;
+  transition: opacity .2s;
 }
+
 .md-typeset .admonition.ответ > .admonition-title:hover a, .md-typeset .admonition.ответ > summary:hover a, .md-typeset details.ответ > .admonition-title:hover a, .md-typeset details.ответ > summary:hover a {
   opacity: 1;
 }
+
 .md-typeset .admonition.ответ > .admonition-title::before, .md-typeset .admonition.ответ > summary::before, .md-typeset details.ответ > .admonition-title::before, .md-typeset details.ответ > summary::before {
   color: #00C858;
   content: "";
 }
+
 .md-typeset .admonition.определение, .md-typeset details.определение {
   border-left-color: #00B7FF;
 }
-[dir=rtl] .md-typeset .admonition.определение, [dir=rtl] .md-typeset details.определение {
+
+[dir="rtl"] .md-typeset .admonition.определение, [dir="rtl"] .md-typeset details.определение {
   border-right-color: #00B7FF;
 }
+
 .md-typeset .admonition.определение > .admonition-title, .md-typeset .admonition.определение > summary, .md-typeset details.определение > .admonition-title, .md-typeset details.определение > summary {
   color: #005c80;
   border-top: 1px solid rgba(0, 183, 255, 0.1);
   border-bottom-color: px2rem(1px) solid rgba(0, 183, 255, 0.1);
   background-color: rgba(0, 183, 255, 0.1);
 }
+
 .md-typeset .admonition.определение > .admonition-title a, .md-typeset .admonition.определение > summary a, .md-typeset details.определение > .admonition-title a, .md-typeset details.определение > summary a {
   opacity: 0;
   color: #005c80;
-  transition: opacity 0.2s;
+  -webkit-transition: opacity .2s;
+  transition: opacity .2s;
 }
+
 .md-typeset .admonition.определение > .admonition-title:hover a, .md-typeset .admonition.определение > summary:hover a, .md-typeset details.определение > .admonition-title:hover a, .md-typeset details.определение > summary:hover a {
   opacity: 1;
 }
+
 .md-typeset .admonition.определение > .admonition-title::before, .md-typeset .admonition.определение > summary::before, .md-typeset details.определение > .admonition-title::before, .md-typeset details.определение > summary::before {
   color: #00B7FF;
   content: "";
 }
+
 .md-typeset .admonition.теорема, .md-typeset details.теорема {
   border-left-color: #FFA000;
 }
-[dir=rtl] .md-typeset .admonition.теорема, [dir=rtl] .md-typeset details.теорема {
+
+[dir="rtl"] .md-typeset .admonition.теорема, [dir="rtl"] .md-typeset details.теорема {
   border-right-color: #FFA000;
 }
+
 .md-typeset .admonition.теорема > .admonition-title, .md-typeset .admonition.теорема > summary, .md-typeset details.теорема > .admonition-title, .md-typeset details.теорема > summary {
   color: #805000;
   border-top: 1px solid rgba(255, 160, 0, 0.1);
   border-bottom-color: px2rem(1px) solid rgba(255, 160, 0, 0.1);
   background-color: rgba(255, 160, 0, 0.1);
 }
+
 .md-typeset .admonition.теорема > .admonition-title a, .md-typeset .admonition.теорема > summary a, .md-typeset details.теорема > .admonition-title a, .md-typeset details.теорема > summary a {
   opacity: 0;
   color: #805000;
-  transition: opacity 0.2s;
+  -webkit-transition: opacity .2s;
+  transition: opacity .2s;
 }
+
 .md-typeset .admonition.теорема > .admonition-title:hover a, .md-typeset .admonition.теорема > summary:hover a, .md-typeset details.теорема > .admonition-title:hover a, .md-typeset details.теорема > summary:hover a {
   opacity: 1;
 }
+
 .md-typeset .admonition.теорема > .admonition-title::before, .md-typeset .admonition.теорема > summary::before, .md-typeset details.теорема > .admonition-title::before, .md-typeset details.теорема > summary::before {
   color: #FFA000;
   content: "";
 }
+
 .md-typeset .admonition.важно, .md-typeset details.важно {
   border-left-color: #D04F47;
 }
-[dir=rtl] .md-typeset .admonition.важно, [dir=rtl] .md-typeset details.важно {
+
+[dir="rtl"] .md-typeset .admonition.важно, [dir="rtl"] .md-typeset details.важно {
   border-right-color: #D04F47;
 }
+
 .md-typeset .admonition.важно > .admonition-title, .md-typeset .admonition.важно > summary, .md-typeset details.важно > .admonition-title, .md-typeset details.важно > summary {
   color: #682824;
   border-top: 1px solid rgba(208, 79, 71, 0.1);
   border-bottom-color: px2rem(1px) solid rgba(208, 79, 71, 0.1);
   background-color: rgba(208, 79, 71, 0.1);
 }
+
 .md-typeset .admonition.важно > .admonition-title a, .md-typeset .admonition.важно > summary a, .md-typeset details.важно > .admonition-title a, .md-typeset details.важно > summary a {
   opacity: 0;
   color: #682824;
-  transition: opacity 0.2s;
+  -webkit-transition: opacity .2s;
+  transition: opacity .2s;
 }
+
 .md-typeset .admonition.важно > .admonition-title:hover a, .md-typeset .admonition.важно > summary:hover a, .md-typeset details.важно > .admonition-title:hover a, .md-typeset details.важно > summary:hover a {
   opacity: 1;
 }
+
 .md-typeset .admonition.важно > .admonition-title::before, .md-typeset .admonition.важно > summary::before, .md-typeset details.важно > .admonition-title::before, .md-typeset details.важно > summary::before {
   color: #D04F47;
   content: "";
 }
-
 /*# sourceMappingURL=override.css.map */

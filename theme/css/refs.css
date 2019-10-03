@@ -1,12 +1,13 @@
-a[id^=def-],
-a[id^=theorem-] {
+a[id^="def-"],
+a[id^="theorem-"] {
   position: relative;
   top: -70px;
   display: block;
 }
+
 @media print {
-  a[id^=def-],
-a[id^=theorem-] {
+  a[id^="def-"],
+  a[id^="theorem-"] {
     display: none;
   }
 }
@@ -15,5 +16,4 @@ a[id^=theorem-] {
 .theorem-ref {
   padding-left: 6px;
 }
-
 /*# sourceMappingURL=refs.css.map */

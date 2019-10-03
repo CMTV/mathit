@@ -17,5 +17,23 @@
             border: 2px solid #ececec;
             border-radius: 3px;
         }
+        
+        @mixin img-w($wId, $wPercent)
+        {
+            &.w#{$wId}
+            {
+                max-width: $wPercent;
+            }
+        }
+
+        @media (min-width: 500px)
+        {
+            @include img-w(9, 90%);
+            @include img-w(8, 80%);
+            @include img-w(7, 70%);
+            @include img-w(6, 60%);
+            @include img-w(5, 50%);
+        }
     }
 }
+
