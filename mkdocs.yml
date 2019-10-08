@@ -18,6 +18,7 @@ nav:
         - Импликация: base-math-logic/implication/index.md
         - Эквивалентность: base-math-logic/equivalence/index.md
         - Общезначимые формулы: base-math-logic/true-formulas/index.md
+        - Необходимость и достаточность: base-math-logic/necessity-sufficiency/index.md
 
 theme:
     name: material
