@@ -1,0 +1,19 @@
+a[id^="def-"],
+a[id^="theorem-"] {
+  position: relative;
+  top: -70px;
+  display: block;
+}
+
+@media print {
+  a[id^="def-"],
+  a[id^="theorem-"] {
+    display: none;
+  }
+}
+
+.def-ref,
+.theorem-ref {
+  padding-left: 6px;
+}
+/*# sourceMappingURL=refs.css.map */

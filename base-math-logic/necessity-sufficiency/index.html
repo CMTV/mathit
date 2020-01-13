@@ -1,0 +1,941 @@
+
+
+
+
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+        <link rel="canonical" href="https://book.mathit.ru/base-math-logic/necessity-sufficiency/">
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Копировать в буфер">
+      
+        <meta name="lang:clipboard.copied" content="Скопировано в буфер">
+      
+        <meta name="lang:search.language" content="ru, en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="Совпадений не найдено">
+      
+        <meta name="lang:search.result.one" content="Найдено 1 совпадение">
+      
+        <meta name="lang:search.result.other" content="Найдено # совпадений">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+    
+    
+      
+        <title>Необходимость и достаточность - Математика</title>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.1b62728e.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="">
+      
+    
+
+    <!-- Overriding original styles -->
+    <link rel="stylesheet" href="../../css/override.css" />
+
+    <!-- Content -->
+    <link rel="stylesheet" href="../../css/content.css" />
+
+    <!-- References -->
+    <link rel="stylesheet" href="../../css/refs.css" />
+
+    <!-- Donate button -->
+    <link rel="stylesheet" href="../../css/donate.css" />
+
+    <!-- Navigation -->
+    <link rel="stylesheet" href="../../css/nav.css" />
+
+    <!-- Contributors -->
+    <link rel="stylesheet" href="../../css/contributors.css" />
+
+    <!-- Footer -->
+    <link rel="stylesheet" href="../../css/footer.css" />
+
+    <!-- LIBS BEGIN -->
+
+    <!-- Font Awesome 5 -->
+    <link rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+          crossorigin="anonymous">
+
+    <!-- MathJax style -->
+    <link rel="stylesheet" href="../../css/mathjax.css" />
+
+
+    
+    
+      <script src="../../assets/javascripts/modernizr.268332fc.js"></script>
+    
+
+    <!-- Google Auto Ads -->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-8094912170389944",
+            enable_page_level_ads: true
+        });
+    </script>
+
+    <!-- MathJax config -->
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            TeX: { equationNumbers: { autoNumber: "AMS" } },
+            jax: ["input/TeX", "output/HTML-CSS"],
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+                processEscapes: true
+            },
+            messageStyle: "none"
+        });
+    </script>
+
+    <!-- MathJax -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_CHTML&locale=ru' async></script>
+
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="../../libs/magnific-popup/magnific-popup.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../../libs/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <script>
+        $(function ()
+        {
+            $('.md-content a > img').each(function (i, elem)
+            {
+                $(this).parent().addClass('img-link');
+            });
+
+            $('.img-link').magnificPopup({type: 'image'});
+        });
+    </script>
+
+    <!-- DefTheoRef [В будущем сделать pymarkdown аддон!] -->
+    <!-- Добавление возможности ссылаться на определения и теоремы -->
+
+    <script>
+        $(function ()
+        {
+            $('[id^="def-"]').each(function (i, elem)
+            {
+                var id = $(this).attr('id');
+                var $next = $(this).parent().next();
+
+                if ($next.hasClass('определение'))
+                {
+                    $next.find('.admonition-title').append('<a class="def-ref" title="Ссылка на это определение" href="#' + id + '">#</a>');
+                }
+            });
+
+            $('[id^="theorem-"]').each(function (i, elem)
+            {
+                var id = $(this).attr('id');
+                var $next = $(this).parent().next();
+
+                if ($next.hasClass('теорема'))
+                {
+                    $next.find('.admonition-title').append('<a class="theorem-ref" title="Ссылка на эту теорему" href="#' + id + '">#</a>');
+                }
+            });
+        });
+    </script>
+
+
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-133312573-1", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="white" data-md-color-accent="blue">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#необходимость-и-достаточность" tabindex="1" class="md-skip">
+        Перейти к содержанию
+      </a>
+    
+    
+      <!-- Application header -->
+<header class="md-header" data-md-component="header">
+
+    <!-- Top-level navigation -->
+    <nav class="md-header-nav md-grid">
+        <div class="md-flex">
+
+            <!-- Link to home -->
+            <div class="md-flex__cell md-flex__cell--shrink">
+                <a href="https://book.mathit.ru"
+                   title="Математика"
+                   class="md-header-nav__button md-logo">
+                    
+                    <img src="../../logo.svg" width="24" height="24" />
+                    
+                </a>
+            </div>
+
+            <!-- Button to toggle drawer -->
+            <div class="md-flex__cell md-flex__cell--shrink">
+                <label class="md-icon md-icon--menu md-header-nav__button"
+                       for="__drawer"></label>
+            </div>
+
+            <!-- Header title -->
+            <div class="md-flex__cell md-flex__cell--stretch">
+                <div class="md-flex__ellipsis md-header-nav__title"
+                     data-md-component="title">
+                    
+                    <span class="md-header-nav__topic">
+              Математика
+            </span>
+                    <span class="md-header-nav__topic">
+              Необходимость и достаточность
+            </span>
+                    
+                </div>
+            </div>
+
+            <!-- Button to open search dialogue -->
+            <div class="md-flex__cell md-flex__cell--shrink">
+                
+                <label class="md-icon md-icon--search md-header-nav__button"
+                       for="__search"></label>
+
+                <!-- Search interface -->
+                
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Начните печатать для поиска
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+                
+            </div>
+
+            <div class="md-flex__cell md-flex__cell--shrink">
+                <a href="https://www.patreon.com/mathit" target="_blank" class="donate-button">
+    <i class="fas fa-hand-holding-usd"></i>
+    <span>Поддержать!</span>
+</a>
+            </div>
+        </div>
+    </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <!-- Main navigation -->
+<nav class="md-nav md-nav--primary" data-md-level="0">
+
+    <!-- Site title -->
+    <label class="md-nav__title md-nav__title--site" for="__drawer">
+        <a href="https://book.mathit.ru"
+           title="Математика" class="md-nav__button md-logo">
+            
+            <img src="../../logo.svg" width="48" height="48" />
+            
+        </a>
+        <span class="site-name">Математика</span>
+    </label>
+
+    <!-- Donate button -->
+    <div class="md-nav__donate">
+        <a href="https://www.patreon.com/mathit" target="_blank" class="donate-button">
+    <i class="fas fa-hand-holding-usd"></i>
+    <span>Поддержать!</span>
+</a>
+    </div>
+
+    <ul class="md-nav__list nav-links">
+        
+        <li class="md-nav__item">
+            <a href="https://mathit.ru/" target="_blank" title="Задать вопрос"
+               class="md-nav__link">
+                <i class="far fa-question-circle"></i>
+                Задать вопрос
+            </a>
+        </li>
+        
+        <li class="md-nav__item">
+            <a href="https://mathit.ru/" target="_blank" title="Форум"
+               class="md-nav__link">
+                <i class="far fa-comments"></i>
+                Форум
+            </a>
+        </li>
+        
+        <li class="md-nav__item">
+            <a href="https://github.com/math-it/book" target="_blank" title="GitHub"
+               class="md-nav__link">
+                <i class="fab fa-github"></i>
+                GitHub
+            </a>
+        </li>
+        
+    </ul>
+
+    <!-- Render item list -->
+    <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        
+        
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Об учебнике" class="md-nav__link">
+      Об учебнике
+    </a>
+  </li>
+
+        
+        
+        
+        
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Язык математики
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Язык математики
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../math-lang/about-langs/" title="О языках" class="md-nav__link">
+      О языках
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../math-lang/math-lang/" title="Математический язык" class="md-nav__link">
+      Математический язык
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../math-lang/alphabet/" title="Алфавит языка математики" class="md-nav__link">
+      Алфавит языка математики
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../math-lang/expressions/" title="Выражения" class="md-nav__link">
+      Выражения
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../math-lang/operations-relations/" title="Операции и отношения" class="md-nav__link">
+      Операции и отношения
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+        
+        
+        
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Основы логики
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Основы логики
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../about-math-logic/" title="О математической логике" class="md-nav__link">
+      О математической логике
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../logic-operations/" title="Логические операции" class="md-nav__link">
+      Логические операции
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../implication/" title="Импликация" class="md-nav__link">
+      Импликация
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../equivalence/" title="Эквивалентность" class="md-nav__link">
+      Эквивалентность
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../true-formulas/" title="Общезначимые формулы" class="md-nav__link">
+      Общезначимые формулы
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../quantifiers/" title="Кванторы" class="md-nav__link">
+      Кванторы
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Необходимость и достаточность
+      </label>
+    
+    <a href="./" title="Необходимость и достаточность" class="md-nav__link md-nav__link--active">
+      Необходимость и достаточность
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Содержание</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#необходимость" class="md-nav__link">
+    Необходимость
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#достаточность" class="md-nav__link">
+    Достаточность
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#примеры" class="md-nav__link">
+    Примеры
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#применение" class="md-nav__link">
+    Применение
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+    </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Содержание</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#необходимость" class="md-nav__link">
+    Необходимость
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#достаточность" class="md-nav__link">
+    Достаточность
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#примеры" class="md-nav__link">
+    Примеры
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#применение" class="md-nav__link">
+    Применение
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+    
+                
+                  <a href="https://github.com/math-it/book/edit/master/docs/base-math-logic/necessity-sufficiency/index.md" title="Редактировать страницу" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="необходимость-и-достаточность">Необходимость и достаточность<a class="headerlink" href="#необходимость-и-достаточность" title="Permanent link">#</a></h1>
+<p>Два этих слова очень часто встречаются и применяются как в жизни, так и в математике.</p>
+<p>Выясним их точный математический смысл, а также сферу применения.</p>
+<p>И поможет нам в этом деле вот такое высказывание:</p>
+<p style="text-align: center;">"Вы отлично сдали экзамен в ВУЗе"</p>
+<p>В связке с ним будем рассматривать еще два:</p>
+<ul>
+<li>"Вы — студент"</li>
+<li>"Вы все списали"</li>
+</ul>
+<p>Поехали!</p>
+<h2 id="необходимость">Необходимость<a class="headerlink" href="#необходимость" title="Permanent link">#</a></h2>
+<p>Если вы не студент, то и доступа к экзамену вас не будет. Поэтому, "быть студентом" <strong>необходимо</strong> для того, чтобы "отлично сдать экзамен". Другими словами:</p>
+<p style="text-align: center;">"Если вы отлично сдали экзамен, то вы студент"</p>
+<p>Мы только что сформулировали житейский смысл <strong>необходимого</strong> условия. Обобщим для любых высказываний:</p>
+<p><a href="" id="def-necessity"></a></p>
+<div class="admonition определение">
+<p class="admonition-title">Определение</p>
+<p>Пусть есть истинная импликация $ p \Rightarrow q $. Тогда $q$ называют <strong>необходимым</strong> условием для $p$.</p>
+</div>
+<p>Импликация в этом определении не работает в обратную сторону. То есть, из того, что "вы — студент" вовсе не следует, что вы "отлично сдадите экзамен"!</p>
+<h2 id="достаточность">Достаточность<a class="headerlink" href="#достаточность" title="Permanent link">#</a></h2>
+<p>Если вы все списали, то вы точно сдадите экзамен на отлично. Поэтому, "вы все списали" <strong>достаточно</strong> для того, чтобы "отлично сдать экзамен". Снова имеем импликацию:</p>
+<p style="text-align: center;">"Если вы все списали, то вы отлично сдали экзамен"</p>
+<p>Мы установили житейский смысл <strong>достаточного</strong> условия. Введем теперь четкое определение:</p>
+<p><a href="" id="def-sufficiency"></a></p>
+<div class="admonition определение">
+<p class="admonition-title">Определение</p>
+<p>Пусть есть истинная импликация $ p \Rightarrow q $. Тогда $p$ называют <strong>достаточным</strong> условием для $q$.</p>
+</div>
+<p>Как и в случае с необходимостью, не факт, что работает импликация в обратную сторону. То есть, из того, что "вы отлично сдали экзамен" не следует, что "вы все списали".
+Ведь вы могли честно готовится и изучать материал, а не списывать.</p>
+<h2 id="примеры">Примеры<a class="headerlink" href="#примеры" title="Permanent link">#</a></h2>
+<p>До этого момента мы пользовались житейским примером про экзамен, студентов и списывание.
+Сейчас приведем по одному математическому примеру для необходимого и достаточного условий.</p>
+<hr />
+<p><strong>"Стороны попарно параллельны" — необходимое условие для "четырехугольник — квадрат"</strong></p>
+<p>ИЛИ</p>
+<p><strong>"Если четырехугольник — квадрат, то его стороны попарно параллельны"</strong></p>
+<p>Почему? По определению необходимого условия можно составляем импликацию:</p>
+<p style="text-align: center;">"Четырехугольник — квадрат $\Rightarrow$ его стороны попарно параллельны"</p>
+<p>Эта импликация истинна для любых квадратов, так как стороны любого квадрата попарно параллельны.</p>
+<p>Может быть "параллельность сторон" еще и достаточным условием?</p>
+<p>По определению достаточного условия составляем импликацию:</p>
+<p style="text-align: center;">"Стороны четырехугольника попарно параллельны $\Rightarrow$ это квадрат"</p>
+<p>Это не так. Возьмем любой ромб. Его стороны тоже попарно параллельны. По импликации выше любой ромб он должен являться квадратом. Но не все ромбы — квадраты.
+Получается, что импликация для таких "неквадратных" ромбов ложна, а значит параллельность сторон не является достаточным условием.</p>
+<hr />
+<p><strong>$a = 0$ — достаточное условие для $a\cdot b = 0$</strong></p>
+<p>ИЛИ</p>
+<p><strong>$a = 0$ достаточно для того, чтобы $a\cdot b = 0$</strong></p>
+<p>Почему? По определению необходимого условия можно составляем импликацию:</p>
+<p>$$ a = 0 \Rightarrow a\cdot b = 0 $$</p>
+<p>Какое бы $b$ мы не выбрали, его произведение на $ a = 0$ дает $0$. Поэтому эта импликация верна всегда.</p>
+<p>Может быть $a = 0$ еще и необходимым условием?</p>
+<p>По определению необходимого условия составляем импликацию:</p>
+<p>$$ a\cdot b = 0 \Rightarrow a = 0 $$</p>
+<p>Возьмем $b=0$ и $a = 5$. При этих значениях импликация оказыватеся ложной</p>
+<ul>
+<li>$a\cdot b = 0$ — истина, так как $b=0$</li>
+<li>$a = 0$ — ложь, так как $a = 5$</li>
+</ul>
+<p>По определению импликации, она ложна, когда из правды следует ложь. Именно это и показано выше.</p>
+<p>Итак, как минимум при $b=0$ и $a=5$ импликация ложна, а это значит, что $a=0$ не является необходимым условием.</p>
+<h2 id="применение">Применение<a class="headerlink" href="#применение" title="Permanent link">#</a></h2>
+<p style="text-align: center;">$q$ — необходимое условие для $p$</p>
+<p>Но то, что вы являетесь студентом вовсе не означает, что экзамен вы сдадите отлично!</p>
+<p><a href="" id="def-implication"></a></p>
+<div class="admonition определение">
+<p class="admonition-title">Определение</p>
+<p><strong>Необходимое</strong> условие — логическая операция над двумя высказываниями $p$ и $q$, результат который ложный только тогда, когда $p$ истинно, а $q$ ложно.</p>
+</div>
+                
+                  
+                
+                
+              
+
+    <div class="contributors" style="display: none">
+        <h2 id="contributors">Вклад внесли <span class="count">36</span></h2>
+        <ul class="contributors-list"></ul>
+    </div>
+    <script>
+        $(function ()
+        {
+            var editUrl = 'https://github.com/math-it/book/edit/master/docs/base-math-logic/necessity-sufficiency/index.md';
+            var fpath = editUrl.split('https://github.com/math-it/book/edit/master/').pop();
+
+            var already = [];
+
+            fetch('https://api.github.com/repos/math-it/book/commits?path=' + fpath).then(function (response)
+            {
+                return response.json();
+            }).then(function (commits)
+            {
+                for (var i = 0; i < commits.length; i++)
+                {
+                    var author = commits[i].author;
+
+                    if (already.includes(author.login))
+                    {
+                        continue
+                    }
+                    else
+                    {
+                        already.push(author.login);
+                    }
+
+                    var url = 'https://github.com/math-it/book/commits/master/' + fpath + '?author=' + author.login;
+
+                    $('.contributors-list').append('<li><a title="' + author.login + '" href="' + url + '" target="_blank"><img src="' + author.avatar_url + '&s=40" /></a></li>');
+                }
+
+                $('.contributors .count').html(already.length);
+
+                if (already.length > 0)
+                {
+                    $('.contributors').show();
+                }
+            });
+        });
+    </script>
+
+
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+
+<!-- Application footer -->
+<footer class="md-footer">
+
+    <!-- Link to previous and/or next page -->
+    
+    <div class="md-footer-nav">
+        <nav class="md-footer-nav__inner md-grid">
+
+            <!-- Link to previous page -->
+            
+            <a href="../quantifiers/"
+               title="Кванторы"
+               class="md-flex md-footer-nav__link md-footer-nav__link--prev"
+               rel="prev">
+                <div class="md-flex__cell md-flex__cell--shrink">
+                    <i class="md-icon md-icon--arrow-back
+                    md-footer-nav__button"></i>
+                </div>
+                <div class="md-flex__cell md-flex__cell--stretch
+                  md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Назад
+                </span>
+                Кванторы
+              </span>
+                </div>
+            </a>
+            
+
+            <!-- Link to next page -->
+            
+        </nav>
+    </div>
+    
+
+    <!-- Quote -->
+    <div class="md-footer-meta md-quote"></div>
+    <script>
+        $(function ()
+        {
+            var quotes = ['«Очевидный» — самое опасное слово в математике', 'Нельзя быть настоящим математиком, не будучи немного поэтом', 'Математика — это наука о бесконечном', 'Математика — царица наук, арифметика — царица математики', 'Математика — это язык, на котором написана книга природы', 'Математика — это язык!', 'Математика — самая надежная форма пророчества', 'Он стал поэтом – для математика у него не хватало фантазии', 'В математике нет символов для неясных мыслей', '«Если… то…» – если это не математика, то это шантаж', 'Книга природы написана на языке математики', 'Математика - совершенный метод, позволяющий провести самого себя за нос'];
+            var rndQuote = quotes[Math.floor(Math.random()*quotes.length)];
+
+            $('.md-footer-meta.md-quote').html(rndQuote);
+        });
+    </script>
+</footer>
+
+<!-- Counters -->
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(55736443, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/55736443" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.808e90bb.js"></script>
+      
+        
+        
+          
+          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+              
+                <script src="../../assets/javascripts/lunr/lunr.ru.js"></script>
+              
+            
+          
+            
+          
+          
+            <script src="../../assets/javascripts/lunr/lunr.multi.js"></script>
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+  </body>
+</html>
